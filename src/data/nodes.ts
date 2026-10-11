@@ -470,7 +470,9 @@ export const NODES: Record<string, Node> = {
       },
       
     ]
-  }  mythical_beast_type: {
+  }, 
+  
+  mythical_beast_type: {
     id: "mythical_beast_type",
     label: "Mythical Beast — Type",
     icon: "🐾",
