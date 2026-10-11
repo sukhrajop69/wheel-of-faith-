@@ -155,10 +155,21 @@ export default function Summary({
       return;
     }
 
-    // @ts-expect-error canShare exists in modern browsers
-    const canShare = navigator.canShare && navigator.canShare({ files: [file] });
-    if (canShare && navigator.share) {
-      await navigator.share({
+    const canShare =
+  "canShare" in navigator &&
+  typeof (navigator as any).canShare === "function" &&
+  (navigator as any).canShare({ files: [file] });
+
+if (canShare && navigator.share) {
+  await navigator.share({
+    title: "Wheel of Fate Character",
+    text: `My roll: ${title}`,
+    files: [file]
+  });
+} else {
+  await downloadCard();
+}
+    
         title: "Wheel of Fate Character",
         text: `My roll: ${title}`,
         files: [file]
