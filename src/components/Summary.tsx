@@ -169,16 +169,8 @@ if (canShare && navigator.share) {
 } else {
   await downloadCard();
 }
-    
-        title: "Wheel of Fate Character",
-        text: `My roll: ${title}`,
-        files: [file]
-      });
-    } else {
-      await downloadCard();
-    }
   }
-
+  
   return (
     <div className="min-h-screen bg-black text-white flex flex-col items-center px-5 py-10 gap-6">
       <div
