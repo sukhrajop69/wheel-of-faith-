@@ -234,7 +234,8 @@ export const NODES: Record<string, Node> = {
       { label: "Shaman", effects: [{ type: "stat", stat: "iq", delta: 2, reason: "Orc Shaman" }] },
       { label: "Warlord", effects: [{ type: "stat", stat: "str", delta: 1, reason: "Orc Warlord" }, { type: "stat", stat: "dur", delta: 1, reason: "Orc Warlord" }] }
     ]
-  }
+  },
+  
     fey_powers: {
     id: "fey_powers",
     label: "Fey — Powers",
@@ -466,7 +467,8 @@ export const NODES: Record<string, Node> = {
           { type: "stat", stat: "dur", delta: 4, reason: "Souls Consumed" },
           { type: "stat", stat: "iq", delta: -1, reason: "Souls Consumed (corruption)" }
         ]
-      }
+      },
+      
     ]
   }  mythical_beast_type: {
     id: "mythical_beast_type",
@@ -760,7 +762,9 @@ export const NODES: Record<string, Node> = {
       "Dravenn",
       "Aetherion"
     ].map((s) => ({ label: s }))
-  }  god_type: {
+  },
+
+god_type: {
     id: "god_type",
     label: "God — Type",
     icon: "⭐",
